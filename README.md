@@ -21,14 +21,14 @@ A modern, full-stack library management application built with React, Node.js, a
 
 1.  **Server**:
     ```bash
-    cd server
+    cd library-app/server
     npm install
     npm start
     ```
 
 2.  **Client**:
     ```bash
-    cd client
+    cd library-app/client
     npm install
     npm run dev
     ```
