@@ -1,0 +1,7 @@
+This is a dummy content file for the novel Finding_Cinderella by Colleen Hoover.
+
+(Full text not available in this demo).
+
+Details:
+Title: Finding Cinderella
+Author: Colleen Hoover

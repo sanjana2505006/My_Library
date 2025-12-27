@@ -1,0 +1,7 @@
+This is a dummy content file for the novel It_Starts_with_Us by Colleen Hoover.
+
+(Full text not available in this demo).
+
+Details:
+Title: It Starts with Us
+Author: Colleen Hoover

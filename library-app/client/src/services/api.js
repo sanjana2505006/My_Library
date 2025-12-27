@@ -12,6 +12,7 @@ export const getBookById = async (id) => {
     return response.data;
 };
 
+// Modified: Accepts FormData or JSON. If FormData, header is set automatically by Axios usually, or we can force it.
 export const createBook = async (bookData) => {
     const response = await axios.post(API_URL, bookData);
     return response.data;
@@ -24,5 +25,10 @@ export const updateBook = async (id, bookData) => {
 
 export const deleteBook = async (id) => {
     const response = await axios.delete(`${API_URL}/${id}`);
+    return response.data;
+};
+
+export const getBookContent = async (id) => {
+    const response = await axios.get(`${API_URL}/${id}/content`);
     return response.data;
 };

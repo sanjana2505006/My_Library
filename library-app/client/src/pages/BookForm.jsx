@@ -14,6 +14,7 @@ const BookForm = () => {
         publishedYear: '',
         description: ''
     });
+    const [file, setFile] = useState(null);
 
     useEffect(() => {
         if (isEditing) {
@@ -40,13 +41,30 @@ const BookForm = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
+    const handleFileChange = (e) => {
+        setFile(e.target.files[0]);
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // Use FormData to handle file uploads
+        const data = new FormData();
+        data.append('title', formData.title);
+        data.append('author', formData.author);
+        data.append('genre', formData.genre);
+        data.append('publishedYear', formData.publishedYear);
+        data.append('description', formData.description);
+
+        if (file) {
+            data.append('bookFile', file);
+        }
+
         try {
             if (isEditing) {
-                await updateBook(id, formData);
+                await updateBook(id, data);
             } else {
-                await createBook(formData);
+                await createBook(data);
             }
             navigate('/');
         } catch (error) {
@@ -73,7 +91,7 @@ const BookForm = () => {
     return (
         <div className="container" style={{ maxWidth: '600px' }}>
             <h2 style={{ marginBottom: '2rem' }}>{isEditing ? 'Edit Book' : 'Add New Novel'}</h2>
-            <form onSubmit={handleSubmit} className="card">
+            <form onSubmit={handleSubmit} className="card" encType="multipart/form-data">
                 <div>
                     <label style={labelStyle}>Title *</label>
                     <input
@@ -123,6 +141,16 @@ const BookForm = () => {
                         style={{ ...inputStyle, minHeight: '100px' }}
                         placeholder="Short summary of the novel..."
                     ></textarea>
+                </div>
+
+                <div style={{ marginBottom: '16px' }}>
+                    <label style={labelStyle}>Upload Book File (.txt recommended)</label>
+                    <input
+                        type="file"
+                        onChange={handleFileChange}
+                        style={{ ...inputStyle, padding: '8px' }}
+                        accept=".txt,.md"
+                    />
                 </div>
 
                 <div style={{ display: 'flex', gap: '1rem', marginTop: '1rem' }}>

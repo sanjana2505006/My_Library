@@ -1,0 +1,7 @@
+This is a dummy content file for the novel Hopeless by Colleen Hoover.
+
+(Full text not available in this demo).
+
+Details:
+Title: Hopeless
+Author: Colleen Hoover
