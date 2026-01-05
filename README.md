@@ -1,10 +1,10 @@
 ## Library project
 for client 
-`cd library-app/client
+`cd client
 npm install
 npm run dev`
 
 and for server 
-`cd library-app/server
+`cd server
 npm install
 npm start`
