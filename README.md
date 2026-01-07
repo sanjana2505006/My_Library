@@ -4,7 +4,6 @@ This project is a full-stack JavaScript web application built using React on the
 
 The project is designed to be lightweight and easy to set up, using a file-based JSON datastore instead of a traditional database, making it ideal for rapid development and learning purposes.
 
-⸻
 
 ## 🚀 Features
 	•	User authentication using JWT (JSON Web Tokens)
@@ -16,7 +15,6 @@ The project is designed to be lightweight and easy to set up, using a file-based
 	•	Modular and reusable React components
 	•	Fast development setup with Vite and hot reloading
 
-⸻
 
 ## 🛠 Tech Stack
 
@@ -38,14 +36,12 @@ Backend
 Data Storage
 	•	JSON-based file storage (used for lightweight persistence and prototyping)
 
-⸻
 
 ## ⚙️ Development Tools
 	•	Concurrently – Run frontend and backend together
 	•	Nodemon – Automatic server restart on changes
 	•	ESLint – Code quality and consistency
 
-⸻
 
 ## 📖 Purpose & Learning Outcomes
 
@@ -54,9 +50,6 @@ This project was built to:
 	•	Understand authentication workflows and secure data handling
 	•	Practice building and consuming REST APIs
 	•	Learn how frontend and backend systems interact in real-world applications
-
-⸻
-
 
 
 
